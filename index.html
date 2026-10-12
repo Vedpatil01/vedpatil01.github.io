@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Vedant Patil | Software and ML Engineer</title>
-<meta name="description" content="Portfolio of Vedant Patil: projects, experience and education in AI, computer vision and full-stack development.">
+<meta name="description" content="Portfolio of Vedant Patil: AI and full-stack projects, internship experience and education.">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,6 @@ a{color:var(--cobalt)}
 :focus-visible{outline:3px solid var(--amber);outline-offset:3px}
 .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
 
-/* header */
 header{position:absolute;top:0;left:0;right:0;z-index:5}
 nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
 nav .logo{font-family:var(--head);font-weight:700;color:#fff;text-decoration:none;font-size:1.1rem}
@@ -31,57 +30,64 @@ nav ul{display:flex;gap:22px;list-style:none}
 nav ul a{color:#C9D3F5;text-decoration:none;font-size:.95rem}
 nav ul a:hover{color:#fff}
 
-/* hero */
 .hero{position:relative;background:var(--navy);color:#fff;min-height:100vh;display:flex;align-items:center;overflow:hidden}
 #net{position:absolute;inset:0;width:100%;height:100%}
 .hero .wrap{position:relative;z-index:2;padding-top:90px;padding-bottom:70px}
 .hero h1{font-family:var(--head);font-weight:700;font-size:clamp(2.8rem,8vw,5.6rem);line-height:1.02;letter-spacing:-.02em}
-.hero p.role{font-family:var(--head);font-weight:500;font-size:clamp(1.2rem,3vw,1.7rem);color:var(--sky);margin-top:14px}
-.hero p.lead{max-width:56ch;margin-top:22px;color:#D7DEF7}
+.hero .role{font-family:var(--head);font-weight:500;font-size:clamp(1.15rem,3vw,1.7rem);color:var(--sky);margin-top:16px;min-height:2.2em}
+.hero .role b{color:#fff;font-weight:500;border-right:2px solid var(--amber);padding-right:4px;animation:caret 1s steps(1) infinite}
+@keyframes caret{50%{border-color:transparent}}
+.hero p.lead{max-width:56ch;margin-top:10px;color:#D7DEF7}
 .btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
-.btn{display:inline-block;padding:13px 24px;border-radius:6px;font-weight:500;text-decoration:none;font-size:1rem}
+.btn{display:inline-block;padding:13px 24px;border-radius:6px;font-weight:500;text-decoration:none;font-size:1rem;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
 .btn.primary{background:var(--amber);color:#1A1200}
 .btn.primary:hover{background:#FFC24D}
 .btn.ghost{border:1.5px solid #5B6EA8;color:#fff}
 .btn.ghost:hover{border-color:#fff}
 
-/* sections */
 section{padding:84px 0;border-bottom:1px solid var(--line)}
-section:last-of-type{border-bottom:0}
 h2{font-family:var(--head);font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.15;letter-spacing:-.01em;margin-bottom:34px}
 .cols{display:grid;grid-template-columns:1fr 2fr;gap:40px}
 .cols h2{margin-bottom:0}
-.cols p+p{margin-top:14px}
 .prose{max-width:66ch}
+.prose p+p{margin-top:14px}
 
-/* experience */
 .job{border-left:3px solid var(--cobalt);padding-left:22px}
 .job h3{font-family:var(--head);font-size:1.3rem}
 .job .meta{color:var(--muted);font-size:.95rem;margin:2px 0 12px}
 .job ul{padding-left:18px;max-width:66ch}
 .job li+li{margin-top:8px}
 
-/* projects */
-.proj{display:grid;grid-template-columns:1fr 2fr;gap:40px;padding:30px 0;border-top:1px solid var(--line)}
+.proj{display:grid;grid-template-columns:1fr 2fr;gap:40px;padding:34px 0;border-top:1px solid var(--line)}
 .proj:first-of-type{border-top:2px solid var(--ink)}
-.proj h3{font-family:var(--head);font-size:1.4rem;line-height:1.2}
-.proj .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.proj h3{font-family:var(--head);font-size:1.45rem;line-height:1.2}
+.proj .sub{color:var(--muted);font-size:.95rem;margin-top:6px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .tag{font-size:.82rem;padding:3px 10px;border-radius:99px;background:#E4E9FB;color:#23338A}
-.proj .links{margin-top:14px;display:flex;gap:18px}
-.proj.feature h3{font-size:1.8rem}
+.links{margin-top:16px;display:flex;gap:18px;flex-wrap:wrap}
+.proj ul{padding-left:18px;margin-top:10px;max-width:66ch}
+.proj li+li{margin-top:6px}
 
-/* skills */
+.flow{margin-top:22px;background:var(--navy);border-radius:10px;padding:16px 14px 8px}
+.flow svg{width:100%;height:auto;display:block}
+.flow text{font-family:var(--head);font-size:14px;fill:#fff;text-anchor:middle}
+.flow .small{font-family:var(--body);font-size:11px;fill:#8FA5FF}
+.flow rect{fill:var(--navy2);stroke:#5B6EA8;stroke-width:1.2}
+.flow rect.hot{stroke:var(--amber)}
+.flow path{fill:none;stroke:var(--sky);stroke-width:1.6;stroke-dasharray:5 5;animation:dash 1.4s linear infinite}
+.flow path.loop{stroke:var(--amber)}
+@keyframes dash{to{stroke-dashoffset:-20}}
+
 .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px}
 .skills h3{font-family:var(--head);font-size:1.05rem;margin-bottom:8px}
 .skills p{color:var(--muted)}
 
-/* education */
 .edu+.edu{margin-top:26px}
 .edu h3{font-family:var(--head);font-size:1.2rem}
 .edu .meta{color:var(--muted);font-size:.95rem}
 
-/* contact */
-.contact{background:var(--navy);color:#fff}
+.contact{background:var(--navy);color:#fff;border-bottom:0}
 .contact h2{margin-bottom:14px}
 .contact p{color:#D7DEF7;max-width:52ch}
 .contact .btns{margin-top:26px}
@@ -92,6 +98,10 @@ footer{background:var(--navy);color:#8C98C4;font-size:.9rem;padding:22px 0 34px;
   nav ul{gap:14px}
   nav ul li:nth-child(n+4){display:none}
   section{padding:60px 0}
+}
+@media(prefers-reduced-motion:reduce){
+  .flow path,.hero .role b{animation:none}
+  html{scroll-behavior:auto}
 }
 </style>
 </head>
@@ -117,8 +127,8 @@ footer{background:var(--navy);color:#8C98C4;font-size:.9rem;padding:22px 0 34px;
     <canvas id="net" aria-hidden="true"></canvas>
     <div class="wrap">
       <h1>Vedant Patil</h1>
-      <p class="role">Software and machine learning engineer</p>
-      <p class="lead">I build AI systems that work end to end: computer vision models, multi-agent pipelines and the APIs and interfaces around them.</p>
+      <p class="role">I build <b id="typed">multi-agent AI pipelines</b></p>
+      <p class="lead">Software and machine learning engineer. I take AI work from the model to the API to the screen, so it's something people can actually use.</p>
       <div class="btns">
         <a class="btn primary" href="#projects">See my projects</a>
         <a class="btn ghost" href="resume.pdf">Download resume</a>
@@ -131,7 +141,8 @@ footer{background:var(--navy);color:#8C98C4;font-size:.9rem;padding:22px 0 34px;
       <h2>About</h2>
       <div class="prose">
         <p>I graduated in 2025 with a B.Tech in Computer Science Engineering (AI and Data Science) from MIT World Peace University, Pune, and completed an AI program at IIT Jodhpur.</p>
-        <p>I work across the stack: Python and FastAPI on the back end, React on the front end, and PyTorch, TensorFlow and OpenCV for models. I'm looking for software engineer and ML engineer roles in Hyderabad, Bangalore, Pune and Mumbai.</p>
+        <p>I work across the stack: Python and FastAPI on the back end, React on the front end, and PyTorch, TensorFlow and OpenCV for models. Lately I've been building agent systems that plan, search, critique and write, and making them reliable enough to run unattended.</p>
+        <p>I'm looking for software engineer and ML engineer roles in Hyderabad, Bangalore, Pune and Mumbai.</p>
       </div>
     </div>
   </section>
@@ -140,30 +151,53 @@ footer{background:var(--navy);color:#8C98C4;font-size:.9rem;padding:22px 0 34px;
     <div class="wrap">
       <h2>Projects</h2>
 
-      <article class="proj feature">
-        <div><h3>Multi-agent researcher</h3></div>
+      <article class="proj">
         <div>
-          <p>REPLACE: In 2-3 sentences, say what it does, how the agents divide the work, and what the output looks like.</p>
-          <div class="tags"><span class="tag">Python</span><span class="tag">LLM agents</span><span class="tag">REPLACE</span></div>
-          <div class="links"><a href="https://github.com/Vedpatil01">View code</a><a href="#">Live demo</a></div>
+          <h3>Multi-agent research assistant</h3>
+          <p class="sub">Automated research and report writing</p>
+        </div>
+        <div>
+          <p>A platform where four agents split the work of researching a topic: one plans the questions, one searches the web, one critiques the findings, and one writes the report.</p>
+          <ul>
+            <li>Built the workflow as a four-node LangGraph state machine, with a critique loop that sends weak answers back for another search.</li>
+            <li>Added limits that stop agents from cycling forever and that trim long outputs to stay under API rate limits.</li>
+            <li>Exposed it through an async FastAPI service with Pydantic schemas, and packaged it with Docker so it starts with one script.</li>
+          </ul>
+          <div class="flow">
+            <svg viewBox="0 0 640 140" role="img" aria-label="Flow: Planner, then Searcher, then Critic, then Synthesizer. Critic can send work back to Searcher.">
+              <rect x="10" y="62" width="130" height="50" rx="8"/><text x="75" y="92">Planner</text>
+              <rect x="170" y="62" width="130" height="50" rx="8"/><text x="235" y="92">Searcher</text>
+              <rect class="hot" x="330" y="62" width="130" height="50" rx="8"/><text x="395" y="92">Critic</text>
+              <rect x="490" y="62" width="130" height="50" rx="8"/><text x="555" y="92">Synthesizer</text>
+              <path d="M140 87 H170"/><path d="M300 87 H330"/><path d="M460 87 H490"/>
+              <path class="loop" d="M395 62 C395 8 235 8 235 62"/>
+              <text class="small" x="315" y="26">needs more evidence</text>
+            </svg>
+          </div>
+          <div class="tags"><span class="tag">Python</span><span class="tag">LangGraph</span><span class="tag">FastAPI</span><span class="tag">Docker</span><span class="tag">Groq API</span><span class="tag">Tavily</span></div>
+          <div class="links">
+            <a data-link="researcherRepo" hidden>View code</a>
+            <a data-link="researcherDemo" hidden>Live demo</a>
+          </div>
         </div>
       </article>
 
       <article class="proj">
-        <div><h3>REPLACE: Project name</h3></div>
         <div>
-          <p>REPLACE: What problem it solves and what you built. Add a number if you have one, such as accuracy or speed.</p>
-          <div class="tags"><span class="tag">YOLOv8</span><span class="tag">OpenCV</span><span class="tag">REPLACE</span></div>
-          <div class="links"><a href="#">View code</a></div>
+          <h3>ManageJob</h3>
+          <p class="sub">AI-powered job portal, built during my internship</p>
         </div>
-      </article>
-
-      <article class="proj">
-        <div><h3>REPLACE: Project name</h3></div>
         <div>
-          <p>REPLACE: What problem it solves and what you built.</p>
-          <div class="tags"><span class="tag">React</span><span class="tag">FastAPI</span><span class="tag">REPLACE</span></div>
-          <div class="links"><a href="#">View code</a></div>
+          <p>A job portal where recruiters and candidates each get their own workspace, with a machine learning model that ranks resumes against a job post.</p>
+          <ul>
+            <li>Built the back end in FastAPI with MongoDB and Supabase, and the front end in React.</li>
+            <li>Secured it with JWT login and role-based access, so candidates and recruiters only see what they should.</li>
+            <li>Trained a PyTorch ranking engine that scores resumes, so recruiters see the best matches first.</li>
+          </ul>
+          <div class="tags"><span class="tag">React</span><span class="tag">FastAPI</span><span class="tag">MongoDB</span><span class="tag">Supabase</span><span class="tag">PyTorch</span><span class="tag">JWT</span></div>
+          <div class="links">
+            <a data-link="manageJobRepo" hidden>View code</a>
+          </div>
         </div>
       </article>
     </div>
@@ -176,9 +210,9 @@ footer{background:var(--navy);color:#8C98C4;font-size:.9rem;padding:22px 0 34px;
         <h3>Intern, Salahkaar Consultants</h3>
         <p class="meta">Pune, about 6 months</p>
         <ul>
-          <li>REPLACE: What you built, with the tools you used.</li>
-          <li>REPLACE: A result with a number, such as time saved or accuracy gained.</li>
-          <li>REPLACE: Something you owned or shipped.</li>
+          <li>Built ManageJob, an AI-powered job portal, from the database to the user interface.</li>
+          <li>Developed the resume ranking engine in PyTorch and connected it to the FastAPI back end.</li>
+          <li>Implemented secure login and role-based access for recruiters and candidates.</li>
         </ul>
       </div>
     </div>
@@ -190,7 +224,8 @@ footer{background:var(--navy);color:#8C98C4;font-size:.9rem;padding:22px 0 34px;
       <div class="skills">
         <div><h3>Languages</h3><p>Python, JavaScript</p></div>
         <div><h3>Machine learning</h3><p>PyTorch, TensorFlow, YOLOv8, MediaPipe, OpenCV</p></div>
-        <div><h3>Back end and data</h3><p>FastAPI, MongoDB, Supabase</p></div>
+        <div><h3>AI agents</h3><p>LangGraph, LangChain, CrewAI, RAG</p></div>
+        <div><h3>Back end and data</h3><p>FastAPI, MongoDB, Supabase, Docker</p></div>
         <div><h3>Front end</h3><p>React.js, HTML, CSS</p></div>
       </div>
     </div>
@@ -215,11 +250,11 @@ footer{background:var(--navy);color:#8C98C4;font-size:.9rem;padding:22px 0 34px;
   <section id="contact" class="contact">
     <div class="wrap">
       <h2>Get in touch</h2>
-      <p>I'm open to software engineer and ML engineer roles. Email is the fastest way to reach me.</p>
+      <p>I'm open to software engineer and ML engineer roles. Send me a message and I'll reply quickly.</p>
       <div class="btns">
-        <a class="btn primary" href="mailto:REPLACE@example.com">Email me</a>
+        <a class="btn primary" data-link="email" hidden>Email me</a>
         <a class="btn ghost" href="https://github.com/Vedpatil01">GitHub</a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/REPLACE">LinkedIn</a>
+        <a class="btn ghost" data-link="linkedin" hidden>LinkedIn</a>
       </div>
     </div>
   </section>
@@ -228,56 +263,98 @@ footer{background:var(--navy);color:#8C98C4;font-size:.9rem;padding:22px 0 34px;
 <footer>Vedant Patil, 2026</footer>
 
 <script>
+/* Fill these in once. Anything left empty is hidden automatically. */
+var LINKS = {
+  email: "",           // example: "you@gmail.com"
+  linkedin: "",        // example: "https://www.linkedin.com/in/your-name"
+  researcherRepo: "",  // example: "https://github.com/Vedpatil01/your-repo"
+  researcherDemo: "",
+  manageJobRepo: ""
+};
+
+document.querySelectorAll('[data-link]').forEach(function(a){
+  var v = LINKS[a.dataset.link];
+  if(!v) return;
+  a.href = a.dataset.link === 'email' ? 'mailto:' + v : v;
+  a.hidden = false;
+});
+
+/* rotating line in the hero */
 (function(){
-  var c=document.getElementById('net'),x=c.getContext('2d');
-  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var W,H,nodes=[],mouse={x:-999,y:-999},dpr=Math.min(window.devicePixelRatio||1,2);
+  var el = document.getElementById('typed');
+  var words = ['multi-agent AI pipelines','computer vision models','full-stack products'];
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var w = 0, i = words[0].length, del = true;
+  function tick(){
+    var t = words[w];
+    el.textContent = t.slice(0, i);
+    if(del){
+      i--;
+      if(i < 0){ del = false; w = (w + 1) % words.length; i = 0; }
+      setTimeout(tick, 35);
+    } else {
+      i++;
+      if(i > words[w].length){ del = true; i = words[w].length; setTimeout(tick, 1800); return; }
+      setTimeout(tick, 70);
+    }
+  }
+  setTimeout(tick, 1800);
+})();
+
+/* hero network */
+(function(){
+  var c = document.getElementById('net'), x = c.getContext('2d');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var W, H, nodes = [], mouse = {x:-999, y:-999}, dpr = Math.min(window.devicePixelRatio || 1, 2);
   function size(){
-    var r=c.getBoundingClientRect();W=r.width;H=r.height;
-    c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0);
-    var n=Math.max(28,Math.min(70,Math.round(W*H/20000)));
-    nodes=[];
-    for(var i=0;i<n;i++)nodes.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,r:Math.random()<.12?4:2.2,hub:false});
-    nodes.forEach(function(p){p.hub=p.r>3});
+    var r = c.getBoundingClientRect(); W = r.width; H = r.height;
+    c.width = W * dpr; c.height = H * dpr; x.setTransform(dpr, 0, 0, dpr, 0, 0);
+    var n = Math.max(28, Math.min(70, Math.round(W * H / 20000)));
+    nodes = [];
+    for(var i = 0; i < n; i++){
+      var hub = Math.random() < .12;
+      nodes.push({x:Math.random()*W, y:Math.random()*H, vx:(Math.random()-.5)*.4, vy:(Math.random()-.5)*.4, r:hub?4:2.2, hub:hub});
+    }
   }
   function draw(){
-    x.clearRect(0,0,W,H);
-    var D=140;
-    for(var i=0;i<nodes.length;i++){
-      var a=nodes[i];
-      for(var j=i+1;j<nodes.length;j++){
-        var b=nodes[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);
-        if(d<D){
-          x.strokeStyle=(a.hub||b.hub)?'rgba(255,176,32,'+(.5*(1-d/D))+')':'rgba(143,165,255,'+(.4*(1-d/D))+')';
-          x.lineWidth=(a.hub||b.hub)?1.2:.8;
-          x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke();
+    x.clearRect(0, 0, W, H);
+    var D = 140;
+    for(var i = 0; i < nodes.length; i++){
+      var a = nodes[i];
+      for(var j = i + 1; j < nodes.length; j++){
+        var b = nodes[j], dx = a.x - b.x, dy = a.y - b.y, d = Math.sqrt(dx*dx + dy*dy);
+        if(d < D){
+          var hot = a.hub || b.hub;
+          x.strokeStyle = hot ? 'rgba(255,176,32,' + (.5*(1-d/D)) + ')' : 'rgba(143,165,255,' + (.4*(1-d/D)) + ')';
+          x.lineWidth = hot ? 1.2 : .8;
+          x.beginPath(); x.moveTo(a.x, a.y); x.lineTo(b.x, b.y); x.stroke();
         }
       }
     }
     nodes.forEach(function(p){
-      x.fillStyle=p.hub?'#FFB020':'#8FA5FF';
-      x.beginPath();x.arc(p.x,p.y,p.r,0,6.283);x.fill();
+      x.fillStyle = p.hub ? '#FFB020' : '#8FA5FF';
+      x.beginPath(); x.arc(p.x, p.y, p.r, 0, 6.283); x.fill();
     });
   }
   function step(){
     nodes.forEach(function(p){
-      var dx=mouse.x-p.x,dy=mouse.y-p.y,d=Math.sqrt(dx*dx+dy*dy);
-      if(d<180&&d>1){p.vx+=dx/d*.012;p.vy+=dy/d*.012}
-      p.vx*=.995;p.vy*=.995;
-      p.x+=p.vx;p.y+=p.vy;
-      if(p.x<0||p.x>W)p.vx*=-1;
-      if(p.y<0||p.y>H)p.vy*=-1;
+      var dx = mouse.x - p.x, dy = mouse.y - p.y, d = Math.sqrt(dx*dx + dy*dy);
+      if(d < 180 && d > 1){ p.vx += dx/d*.012; p.vy += dy/d*.012; }
+      p.vx *= .995; p.vy *= .995;
+      p.x += p.vx; p.y += p.vy;
+      if(p.x < 0 || p.x > W) p.vx *= -1;
+      if(p.y < 0 || p.y > H) p.vy *= -1;
     });
     draw();
     requestAnimationFrame(step);
   }
   size();
-  window.addEventListener('resize',size);
-  c.parentNode.addEventListener('mousemove',function(e){
-    var r=c.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top;
+  window.addEventListener('resize', size);
+  c.parentNode.addEventListener('mousemove', function(e){
+    var r = c.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top;
   });
-  c.parentNode.addEventListener('mouseleave',function(){mouse.x=mouse.y=-999});
-  if(reduce)draw();else step();
+  c.parentNode.addEventListener('mouseleave', function(){ mouse.x = mouse.y = -999; });
+  if(reduce) draw(); else step();
 })();
 </script>
 </body>
