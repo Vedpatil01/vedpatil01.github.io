@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vedant Patil | Software and ML Engineer</title>
+<meta name="description" content="Portfolio of Vedant Patil: projects, experience and education in AI, computer vision and full-stack development.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0E1A36; --navy2:#16264D; --paper:#F4F6FB; --ink:#16203A; --muted:#55607C;
+  --cobalt:#2F4BFF; --sky:#8FA5FF; --line:#D5DBEA; --amber:#FFB020;
+  --head:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --body:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.65;font-size:17px}
+a{color:var(--cobalt)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+/* header */
+header{position:absolute;top:0;left:0;right:0;z-index:5}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+nav .logo{font-family:var(--head);font-weight:700;color:#fff;text-decoration:none;font-size:1.1rem}
+nav ul{display:flex;gap:22px;list-style:none}
+nav ul a{color:#C9D3F5;text-decoration:none;font-size:.95rem}
+nav ul a:hover{color:#fff}
+
+/* hero */
+.hero{position:relative;background:var(--navy);color:#fff;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+#net{position:absolute;inset:0;width:100%;height:100%}
+.hero .wrap{position:relative;z-index:2;padding-top:90px;padding-bottom:70px}
+.hero h1{font-family:var(--head);font-weight:700;font-size:clamp(2.8rem,8vw,5.6rem);line-height:1.02;letter-spacing:-.02em}
+.hero p.role{font-family:var(--head);font-weight:500;font-size:clamp(1.2rem,3vw,1.7rem);color:var(--sky);margin-top:14px}
+.hero p.lead{max-width:56ch;margin-top:22px;color:#D7DEF7}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.btn{display:inline-block;padding:13px 24px;border-radius:6px;font-weight:500;text-decoration:none;font-size:1rem}
+.btn.primary{background:var(--amber);color:#1A1200}
+.btn.primary:hover{background:#FFC24D}
+.btn.ghost{border:1.5px solid #5B6EA8;color:#fff}
+.btn.ghost:hover{border-color:#fff}
+
+/* sections */
+section{padding:84px 0;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:0}
+h2{font-family:var(--head);font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.15;letter-spacing:-.01em;margin-bottom:34px}
+.cols{display:grid;grid-template-columns:1fr 2fr;gap:40px}
+.cols h2{margin-bottom:0}
+.cols p+p{margin-top:14px}
+.prose{max-width:66ch}
+
+/* experience */
+.job{border-left:3px solid var(--cobalt);padding-left:22px}
+.job h3{font-family:var(--head);font-size:1.3rem}
+.job .meta{color:var(--muted);font-size:.95rem;margin:2px 0 12px}
+.job ul{padding-left:18px;max-width:66ch}
+.job li+li{margin-top:8px}
+
+/* projects */
+.proj{display:grid;grid-template-columns:1fr 2fr;gap:40px;padding:30px 0;border-top:1px solid var(--line)}
+.proj:first-of-type{border-top:2px solid var(--ink)}
+.proj h3{font-family:var(--head);font-size:1.4rem;line-height:1.2}
+.proj .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.tag{font-size:.82rem;padding:3px 10px;border-radius:99px;background:#E4E9FB;color:#23338A}
+.proj .links{margin-top:14px;display:flex;gap:18px}
+.proj.feature h3{font-size:1.8rem}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px}
+.skills h3{font-family:var(--head);font-size:1.05rem;margin-bottom:8px}
+.skills p{color:var(--muted)}
+
+/* education */
+.edu+.edu{margin-top:26px}
+.edu h3{font-family:var(--head);font-size:1.2rem}
+.edu .meta{color:var(--muted);font-size:.95rem}
+
+/* contact */
+.contact{background:var(--navy);color:#fff}
+.contact h2{margin-bottom:14px}
+.contact p{color:#D7DEF7;max-width:52ch}
+.contact .btns{margin-top:26px}
+footer{background:var(--navy);color:#8C98C4;font-size:.9rem;padding:22px 0 34px;text-align:center}
+
+@media(max-width:720px){
+  .cols,.proj{grid-template-columns:1fr;gap:14px}
+  nav ul{gap:14px}
+  nav ul li:nth-child(n+4){display:none}
+  section{padding:60px 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a class="logo" href="#top">Vedant Patil</a>
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <canvas id="net" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <h1>Vedant Patil</h1>
+      <p class="role">Software and machine learning engineer</p>
+      <p class="lead">I build AI systems that work end to end: computer vision models, multi-agent pipelines and the APIs and interfaces around them.</p>
+      <div class="btns">
+        <a class="btn primary" href="#projects">See my projects</a>
+        <a class="btn ghost" href="resume.pdf">Download resume</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap cols">
+      <h2>About</h2>
+      <div class="prose">
+        <p>I graduated in 2025 with a B.Tech in Computer Science Engineering (AI and Data Science) from MIT World Peace University, Pune, and completed an AI program at IIT Jodhpur.</p>
+        <p>I work across the stack: Python and FastAPI on the back end, React on the front end, and PyTorch, TensorFlow and OpenCV for models. I'm looking for software engineer and ML engineer roles in Hyderabad, Bangalore, Pune and Mumbai.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+
+      <article class="proj feature">
+        <div><h3>Multi-agent researcher</h3></div>
+        <div>
+          <p>REPLACE: In 2-3 sentences, say what it does, how the agents divide the work, and what the output looks like.</p>
+          <div class="tags"><span class="tag">Python</span><span class="tag">LLM agents</span><span class="tag">REPLACE</span></div>
+          <div class="links"><a href="https://github.com/Vedpatil01">View code</a><a href="#">Live demo</a></div>
+        </div>
+      </article>
+
+      <article class="proj">
+        <div><h3>REPLACE: Project name</h3></div>
+        <div>
+          <p>REPLACE: What problem it solves and what you built. Add a number if you have one, such as accuracy or speed.</p>
+          <div class="tags"><span class="tag">YOLOv8</span><span class="tag">OpenCV</span><span class="tag">REPLACE</span></div>
+          <div class="links"><a href="#">View code</a></div>
+        </div>
+      </article>
+
+      <article class="proj">
+        <div><h3>REPLACE: Project name</h3></div>
+        <div>
+          <p>REPLACE: What problem it solves and what you built.</p>
+          <div class="tags"><span class="tag">React</span><span class="tag">FastAPI</span><span class="tag">REPLACE</span></div>
+          <div class="links"><a href="#">View code</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap cols">
+      <h2>Experience</h2>
+      <div class="job">
+        <h3>Intern, Salahkaar Consultants</h3>
+        <p class="meta">Pune, about 6 months</p>
+        <ul>
+          <li>REPLACE: What you built, with the tools you used.</li>
+          <li>REPLACE: A result with a number, such as time saved or accuracy gained.</li>
+          <li>REPLACE: Something you owned or shipped.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div><h3>Languages</h3><p>Python, JavaScript</p></div>
+        <div><h3>Machine learning</h3><p>PyTorch, TensorFlow, YOLOv8, MediaPipe, OpenCV</p></div>
+        <div><h3>Back end and data</h3><p>FastAPI, MongoDB, Supabase</p></div>
+        <div><h3>Front end</h3><p>React.js, HTML, CSS</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap cols">
+      <h2>Education</h2>
+      <div>
+        <div class="edu">
+          <h3>B.Tech, Computer Science Engineering (AI and Data Science)</h3>
+          <p class="meta">MIT World Peace University, Pune. Graduated July 2025</p>
+        </div>
+        <div class="edu">
+          <h3>AI program</h3>
+          <p class="meta">IIT Jodhpur</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Get in touch</h2>
+      <p>I'm open to software engineer and ML engineer roles. Email is the fastest way to reach me.</p>
+      <div class="btns">
+        <a class="btn primary" href="mailto:REPLACE@example.com">Email me</a>
+        <a class="btn ghost" href="https://github.com/Vedpatil01">GitHub</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/REPLACE">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>Vedant Patil, 2026</footer>
+
+<script>
+(function(){
+  var c=document.getElementById('net'),x=c.getContext('2d');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var W,H,nodes=[],mouse={x:-999,y:-999},dpr=Math.min(window.devicePixelRatio||1,2);
+  function size(){
+    var r=c.getBoundingClientRect();W=r.width;H=r.height;
+    c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0);
+    var n=Math.max(28,Math.min(70,Math.round(W*H/20000)));
+    nodes=[];
+    for(var i=0;i<n;i++)nodes.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,r:Math.random()<.12?4:2.2,hub:false});
+    nodes.forEach(function(p){p.hub=p.r>3});
+  }
+  function draw(){
+    x.clearRect(0,0,W,H);
+    var D=140;
+    for(var i=0;i<nodes.length;i++){
+      var a=nodes[i];
+      for(var j=i+1;j<nodes.length;j++){
+        var b=nodes[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);
+        if(d<D){
+          x.strokeStyle=(a.hub||b.hub)?'rgba(255,176,32,'+(.5*(1-d/D))+')':'rgba(143,165,255,'+(.4*(1-d/D))+')';
+          x.lineWidth=(a.hub||b.hub)?1.2:.8;
+          x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke();
+        }
+      }
+    }
+    nodes.forEach(function(p){
+      x.fillStyle=p.hub?'#FFB020':'#8FA5FF';
+      x.beginPath();x.arc(p.x,p.y,p.r,0,6.283);x.fill();
+    });
+  }
+  function step(){
+    nodes.forEach(function(p){
+      var dx=mouse.x-p.x,dy=mouse.y-p.y,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<180&&d>1){p.vx+=dx/d*.012;p.vy+=dy/d*.012}
+      p.vx*=.995;p.vy*=.995;
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0||p.x>W)p.vx*=-1;
+      if(p.y<0||p.y>H)p.vy*=-1;
+    });
+    draw();
+    requestAnimationFrame(step);
+  }
+  size();
+  window.addEventListener('resize',size);
+  c.parentNode.addEventListener('mousemove',function(e){
+    var r=c.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top;
+  });
+  c.parentNode.addEventListener('mouseleave',function(){mouse.x=mouse.y=-999});
+  if(reduce)draw();else step();
+})();
+</script>
+</body>
+</html>
